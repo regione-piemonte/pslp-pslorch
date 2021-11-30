@@ -1,0 +1,162 @@
+<!-- ##################################################### -->
+<!-- # Copyright Regione Piemonte - 2021                 # -->
+<!-- # SPDX-License-Identifier: EUPL-1.2-or-later        # -->
+<!-- ##################################################### -->
+<ivy-module version="1.0">
+	<info organisation="csipiemonte" module="pslorch" />
+	<dependencies>
+
+		<!-- librerie per il logging applicativo e la misurazione
+		     delle performance. Nota: la piattaforma jboss impone l'utilizzo della
+		     versione 1.2.14.
+		-->
+		<dependency org="apache" name="log4j" rev="1.2.14">
+			<artifact name="log4j-1.2.14" type="jar" />
+		</dependency>
+
+		<dependency org="csipiemonte" name="util-perf" rev="1.0.1">
+			<artifact name="util-perf-1.0.1" type="jar" />
+		</dependency>
+
+		<dependency org="apache" name="commons-logging" rev="1.1.1">
+			<artifact name="commons-logging-1.1.1" type="jar" />
+		</dependency>
+
+	  	<dependency org="others" name="aopalliance" rev="1.0.0" >
+			<artifact name="aopalliance-1.0.0" type="jar" />
+		</dependency> 
+		
+    	<dependency org="others" name="asm" rev="3.3.1"  transitive="false"/>
+    	
+    	<dependency org="others" name="cglib" rev="2.2.2">
+			<artifact name="cglib-2.2.2" type="jar"/>
+		</dependency>
+		
+		<dependency org="others" name="asm" rev="3.3.1">
+			<artifact name="asm-3.3.1" type="jar"/>
+		</dependency>
+	
+	
+		<!-- ############################################################## -->
+    	<!-- # SPRING                                                     # -->
+    	<!-- ############################################################## -->
+    	<!--  -->
+	    <dependency org="others" name="spring" rev="3.1.1.RELEASE" transitive="false" >
+	      <artifact name="spring-aop-3.1.1.RELEASE" type="jar" />
+	      <artifact name="spring-asm-3.1.1.RELEASE" type="jar" />
+	      <artifact name="spring-beans-3.1.1.RELEASE" type="jar" />
+	      <artifact name="spring-context-3.1.1.RELEASE" type="jar" />
+	      <artifact name="spring-core-3.1.1.RELEASE" type="jar" />
+	      <artifact name="spring-expression-3.1.1.RELEASE" type="jar" />
+	      <artifact name="spring-jdbc-3.1.1.RELEASE" type="jar" />
+	      <artifact name="spring-tx-3.1.1.RELEASE" type="jar" />
+	      <artifact name="spring-web-3.1.1.RELEASE" type="jar" />
+	      <artifact name="spring-test-3.1.1.RELEASE" type="jar" />
+	    </dependency>
+	
+	    
+	    <!-- librerie per JAX-RS -->
+	    <dependency org="others" name="jettison" rev="1.3.1">
+			<artifact name="jettison-1.3.1" type="jar"/>
+		</dependency>
+		<dependency org="others" name="jsr311" rev="1.1.1">
+			<artifact name="jsr311-api-1.1.1" type="jar"/>
+		</dependency>
+		<dependency org="sun" name="servlet-api" rev="2.5">
+		</dependency>
+
+	
+
+		<!--PROTECTED REGION ID(R78539213) ENABLED START-->
+		<dependency org="redhat" name="resteasy-jaxrs" rev="2.3.10.Final-redhat-1">
+			<artifact name="resteasy-jaxrs-2.3.10.Final-redhat-1" type="jar" />
+		</dependency>
+		<dependency org="redhat" name="jackson-mapper-asl" rev="1.9.9.redhat-4">
+			<artifact name="jackson-mapper-asl-1.9.9.redhat-4" type="jar" />
+		</dependency>
+		<dependency org="redhat" name="jackson-core-asl" rev="1.9.9.redhat-4">
+			<artifact name="jackson-core-asl-1.9.9.redhat-4" type="jar" />
+		</dependency>
+		<dependency org="redhat" name="validation-api" rev="1.0.0.GA-redhat-3">
+			<artifact name="validation-api-1.0.0.GA-redhat-3" type="jar" />
+		</dependency>
+		<dependency org="others" name="swagger-annotations" rev="1.5.18">
+			<artifact name="swagger-annotations-1.5.18" type="jar" />
+		</dependency>
+		
+		<dependency org="others" name="swagger-jaxrs" rev="1.5.18">
+			<artifact name="swagger-jaxrs-1.5.18" type="jar" />
+		</dependency>
+	
+		<dependency org="apache" name="commons-io" rev="2.1">
+			<artifact name="commons-io-2.1" type="jar" />
+		</dependency>
+	
+		<!--PROTECTED REGION END-->
+		
+		<!-- Librerie per il tracing su servizio  -->
+				<!-- librerie Core di C.S.I -->
+		<dependency org="csipiemonte" name="csi" rev="1.4.5">
+			<artifact name="csi-apachesoap-1.4.5" type="jar" />
+			<artifact name="csi-core-1.4.5" type="jar" />
+			<artifact name="csi-ejb-1.4.5" type="jar" />
+			<artifact name="csi-ejb-weblogic-1.4.5" type="jar" />
+			<artifact name="csi-rmi-1.4.5" type="jar" />
+			<artifact name="csi-stadapter-1.4.5" type="jar" />
+			<artifact name="csi-tools-1.4.5" type="jar" />
+		</dependency>
+		
+		<!-- librerie per l'implementazione di monitoraggio e diagnostica -->
+		<dependency org="csipiemonte" name="coop-diag" rev="1.2.1">
+			<artifact name="coop-diag-1.2.1" type="jar" />
+		</dependency>
+		
+		<dependency org="csipiemonte" name="coop-trace" rev="1.2.0">
+	    	<artifact name="coop-trace-1.2.0" type="jar" />
+	    </dependency>
+		
+		<!-- 
+		<dependency org="csipiemonte" name="spicdbserv-spicdbserv-client" rev="1.2.0">
+			<artifact name="spicdbserv-spicdbserv-client-1.2.0" type="jar"/>
+		</dependency>
+		<dependency org="csipiemonte" name="silcommon-client" rev="1.0.0">
+			<artifact name="silcommon-client-1.0.0" type="jar"/>
+		</dependency>
+		 -->
+		 <dependency org="apache" name="httpclient" rev="4.4.1">
+			<artifact name="httpclient-4.4.1" type="jar"/>
+		</dependency>
+
+		 <dependency org="apache" name="httpcore" rev="4.4.1">
+			<artifact name="httpcore-4.4.1" type="jar"/>
+		</dependency>
+		
+		<!--dependency org="csipiemonte" name="silos-jedi" rev="1.1.1">
+			<artifact name="silos-jedi-1.1.1" type="jar" />
+		</dependency-->
+		<dependency org="csipiemonte" name="silos-jeff" rev="1.1.0">
+			<artifact name="silos-jeff-1.1.0" type="jar" />
+		</dependency>
+		
+		<dependency org="google" name="gson" rev="2.2.2">
+			<artifact name="gson-2.2.2" type="jar" />
+		</dependency>
+		
+    <dependency org="apache" name="commons-lang" rev="2.5">
+      <artifact name="commons-lang-2.5" type="jar" />
+    </dependency>
+    
+ 	<dependency org="apache" name="cxf" rev="2.7.7" />
+	<dependency org="apache" name="neethi" rev="3.0.2" />
+	<dependency org="apache" name="xmlschema-core" rev="2.0.3" />
+	<dependency org="apache" name="xerces" rev="2.9.0" />
+	<dependency org="others" name="stax2-api" rev="3.1.1" />
+	<dependency org="codehaus" name="woodstox" rev="4.2.0" />
+    <dependency org="others" name="wsdl4j" rev="1.6.3" />
+
+	</dependencies>
+
+
+
+
+</ivy-module>

@@ -1,0 +1,25 @@
+<!-- ##################################################### -->
+<!-- # Copyright Regione Piemonte - 2021                 # -->
+<!-- # SPDX-License-Identifier: EUPL-1.2-or-later        # -->
+<!-- ##################################################### -->
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns="http://java.sun.com/xml/ns/j2ee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	version="1.4" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/application_1_4.xsd">
+
+	<display-name>pslorch</display-name>
+
+	
+  	<!-- web module relativo al web-service con codice=anagrafica e binding=rest --> 
+  	<module>
+    	<web>
+      		<web-uri>pslorch-portale-rest.war</web-uri>
+     		<context-root>pslorch</context-root>
+    	</web>
+  	</module>
+ 
+ 
+
+</application>
+ 

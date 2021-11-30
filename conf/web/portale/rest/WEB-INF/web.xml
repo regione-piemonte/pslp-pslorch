@@ -1,0 +1,60 @@
+<!-- ##################################################### -->
+<!-- # Copyright Regione Piemonte - 2021                 # -->
+<!-- # SPDX-License-Identifier: EUPL-1.2-or-later        # -->
+<!-- ##################################################### -->
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4"
+         xmlns="http://java.sun.com/xml/ns/j2ee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+         http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
+
+
+	<!-- <listener>
+		<listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
+	</listener>
+    -->
+
+	<context-param>
+        <param-name>contextClass</param-name>
+        <param-value>org.springframework.web.context.support.AnnotationConfigWebApplicationContext</param-value>
+    </context-param>
+    
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>it.csi.pslp.pslorch.util.SpringConfig</param-value>
+    </context-param>
+
+   <listener>
+		<listener-class>it.csi.pslp.pslorch.util.AppServletContextListener</listener-class>
+   	</listener>
+   <listener>
+      <listener-class>org.jboss.resteasy.plugins.server.servlet.ResteasyBootstrap</listener-class>
+   </listener>
+   
+	<listener>
+      <listener-class>org.jboss.resteasy.plugins.spring.SpringContextLoaderListener</listener-class>
+   </listener>
+
+   <!-- filtro di protezione ad attacchi XSRF -->
+   <filter>
+		<filter-name>XSRFProtectionFilter</filter-name>
+		<filter-class>it.csi.pslp.pslorch.filter.XSRFProtectionFilter</filter-class>
+		<init-param>
+    		<param-name>disabled</param-name>
+    		<param-value>@@@XSRFFILTER.DISABLED@@@</param-value>
+  		</init-param>
+   </filter>
+   <filter-mapping>
+		<filter-name>XSRFProtectionFilter</filter-name>
+		<url-pattern>*</url-pattern>
+   </filter-mapping>
+
+	<!-- context-param> 
+        <param-name>resteasy.providers</param-name> 
+        <param-value>it.csi.pslp.pslorch.business.ministero.JacksonConfig</param-value>
+    </context-param-->
+
+	
+</web-app>

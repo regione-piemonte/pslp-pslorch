@@ -1,0 +1,14 @@
+<!-- ##################################################### -->
+<!-- # Copyright Regione Piemonte - 2021                 # -->
+<!-- # SPDX-License-Identifier: EUPL-1.2-or-later        # -->
+<!-- ##################################################### -->
+<!ELEMENT CONSULTAZIONE_SMS (USERNAME, PASSWORD, CODICE_PROGETTO,
+REPLY_DETAIL, COD_INT_SCARTI, DATA_ACCODAMENTO_START,
+DATA_ACCODAMENTO_END)>
+<!ELEMENT USERNAME (#PCDATA)>
+<!ELEMENT PASSWORD (#PCDATA)>
+<!ELEMENT CODICE_PROGETTO (#PCDATA)>
+<!ELEMENT REPLY_DETAIL (#PCDATA)>
+<!ELEMENT COD_INT_SCARTI (#PCDATA)>
+<!ELEMENT DATA_ACCODAMENTO_START (#PCDATA)>
+<!ELEMENT DATA_ACCODAMENTO_END (#PCDATA)>
